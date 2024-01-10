@@ -1,0 +1,584 @@
+/*  Global Values  */
+@font-face {
+  font-family: "Geist";
+  src: url("https://pham.codes/d/GeistMonoVF.woff2") format("woff2");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/*--------------------------- */
+
+body {
+  font-family: "Teko", sans-serif;
+  background-color: #f4f4f4;
+}
+
+nav {
+  padding: 20px 40px;
+  background-color: #f4f4f4 !important;
+}
+
+.nav-link {
+  color: #181818;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+.nav-link:hover {
+  color: #7c7ea1 !important;
+}
+
+.icons {
+  gap: 24px;
+}
+
+.icons i {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.offer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4a4c6c;
+  color: white;
+  padding: 12px;
+  gap: 5px;
+}
+.offer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* start a landing  */
+.Landing {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#container3D canvas {
+  position: absolute;
+  width: 100vw !important;
+  height: 100vh !important;
+  top: -100px;
+  left: 0;
+  z-index: -1;
+}
+.words {
+  width: 100%;
+  overflow: hidden;
+}
+.txt {
+  width: 100%;
+  line-height: 500px;
+  color: rgba(74, 76, 108, 0.17);
+  font-size: 300px;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow: hidden;
+  opacity: 0;
+  animation: text-shadow-multicolor2 2s linear 0s 3 normal forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes text-shadow-multicolor2 {
+  0% {
+    text-shadow: 0 0 black, 0 0 red, 0 0 orange, 0 0 yellow, 0 0 green,
+      0 0 skyblue, 0 0 blue, 0 0 white;
+    transform: translateX(0) translateY(0);
+    opacity: 0.2;
+  }
+  50% {
+    text-shadow: -1px -1px black, -3px -3px red, -5px -5px orange,
+      -7px -7px yellow, -9px -9px green, -11px -11px skyblue, -13px -13px blue,
+      -15px -15px white;
+    transform: translateX(8px) translateY(8px);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Landing button {
+  position: relative;
+  width: 184px;
+  height: 45px;
+  border-style: none;
+  border-radius: 100px;
+  border: 4px solid #9fa16d;
+  background: #77794e;
+  box-shadow: 0px 5px 8px 0px rgba(119, 121, 78, 0.4);
+  color: #f4f4f4;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.btn-box button:first-child {
+  background-color: #4a4c6c;
+  border: 4px solid #7c7ea1;
+}
+.Landing button:hover {
+  background-color: transparent;
+  color: #181818;
+}
+.imgg img {
+  width: 250px;
+  height: 250px;
+}
+.store .card {
+  background-color: #e9e9eb;
+  border-radius: 4px;
+  box-shadow: 5.934px 5.934px 3.956px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.card::after {
+  position: absolute;
+  content: "Add To Cart";
+  width: 0px;
+  height: 40px;
+  opacity: 0;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  top: 61%;
+  left: 0px;
+  line-height: 45px;
+  transition: 0.5s;
+}
+.card:hover::after {
+  opacity: 1;
+  width: 100%;
+}
+.card p {
+  font-size: 16px;
+  color: var(--Secondary-2, #db4444);
+  font-weight: 500;
+  line-height: 24px;
+}
+.card-txt {
+  background-color: white;
+}
+.card h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.stars i {
+  color: gold;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+}
+.heart {
+  font-size: 18px;
+  cursor: pointer;
+}
+.card-head span {
+  background: var(--Secondary-2, #db4444);
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  width: 54px;
+  height: 26px;
+  font-size: 12px;
+  line-height: 5px;
+}
+/* end  a landing  */
+
+/* start gallery area*/
+hr {
+  position: relative;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gallery .container {
+  overflow: hidden;
+}
+
+.gallery button {
+  width: 140px;
+  height: 45px;
+}
+.gallery .row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.gallery img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+.show {
+  position: relative;
+}
+.gallery-content {
+  position: absolute;
+  color: white;
+  padding-left: 40px;
+  top: 70%;
+}
+.gallery h3 {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+}
+.gallery button {
+  outline: none;
+  border-style: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: white;
+  border: 1px solid #fff;
+  transition: 0.3s;
+}
+.gallery button:hover {
+  color: rgb(125, 120, 120);
+  border: 1px solid rgb(125, 120, 120);
+}
+/* end  gallery area*/
+
+/* start a scroll area  */
+
+.scroll-head h2 {
+  font-family: "Geist";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+.scrol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scrol .container {
+  max-width: 1100;
+  width: 100%;
+}
+.caerousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 12px);
+  gap: 16px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.caerousel.dragging {
+  scroll-behavior: auto;
+}
+.caerousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.caerousel .card {
+  background-color: #e9e9eb;
+  border-radius: 4px;
+  box-shadow: 5.934px 5.934px 3.956px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.caerousel .card .imgg img {
+  width: 250px;
+  height: 250px;
+}
+.arrwos i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.scrol button {
+  width: 120px;
+  height: 35px;
+  background-color: black;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  transition: 0.3s;
+  line-height: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.prev,
+.next {
+  font-size: 20px;
+}
+.scrol button:hover {
+  background-color: transparent;
+  color: black;
+}
+
+/* end  a scroll area  */
+
+/* strat images area */
+.blog {
+  position: relative;
+  width: 100%;
+  max-height: 2000px;
+}
+.blog-img {
+  position: relative;
+}
+
+.blog button {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  background-color: black;
+  border-style: none;
+  padding: 15px;
+  color: white;
+  border: 2px solid black;
+  text-align: center;
+  transition: 0.3s;
+  line-height: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.blog button:hover {
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+}
+.blog .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.big-side img {
+  object-fit: cover;
+  min-width: calc(100% + 17px);
+  height: 542px;
+}
+.small-side img {
+  object-fit: cover;
+  height: 542px;
+  width: calc(100%);
+}
+/* end  images area */
+
+/* start featuers area  */
+.count-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #78787a;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 55;
+}
+.count-icon::before {
+  content: "";
+  position: absolute;
+  background-color: #181818;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: -15;
+}
+.featuers .col-md-4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.count-icon i {
+  font-size: 50px;
+  color: white;
+}
+.featuers h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+.featuers p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+/* end  featuers area  */
+
+/* start footer area  */
+
+footer {
+  background-color: #333;
+}
+.address h5,
+.contact h5 {
+  color: white;
+  font-weight: 700;
+  line-height: 150%;
+  font-size: 28px;
+}
+.address p {
+  color: white;
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 20px;
+}
+.contact a {
+  outline: none;
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+}
+.social-media i {
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.foot-links ul li {
+  list-style: none;
+}
+.foot-links ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+  line-height: 40px;
+}
+.end {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copy-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  border-top: 1px solid white;
+}
+.copy-right a,
+.copy-right h4 {
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+}
+.copy-right a {
+  color: #db4444;
+}
+/* end footer area  */
+
+/* start responsive area */
+@media screen and (max-width: 900px) {
+  .caerousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+  .scroll-head h2 {
+    font-family: "Geist";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .words h1 {
+    font-size: 230px;
+    overflow: visible;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .words h1 {
+    transform: scale(0.5);
+    overflow: visible;
+  }
+  .words {
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    width: auto;
+  }
+  .Landing {
+    position: relative;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 600px) {
+  .caerousel {
+    grid-auto-columns: calc((100%));
+    gap: 20px;
+  }
+
+  footer .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .words h1 {
+    font-size: 150px;
+    overflow: visible;
+  }
+
+  .blog-img img {
+    height: 250px;
+  }
+  .btn-box button {
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    margin-bottom: 15px;
+  }
+}
+/* end  responsive area */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4a4c6c;
+  z-index: 90000;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #009578;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
